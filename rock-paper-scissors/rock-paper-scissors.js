@@ -1,8 +1,7 @@
-
+// Generate random Rock, Paper, or Scissors for Computer
 function getComputerChoice() {
 
 n = Math.floor(Math.random() * 100)
-    console.log(n)
     let ComputerOutput;
     if (33 >= n){
         ComputerOutput = "Rock"
@@ -15,4 +14,8 @@ n = Math.floor(Math.random() * 100)
     }
     return ComputerOutput
 }
-console.log(getComputerChoice())
+let player = prompt("Hello let\'s play rock paper scissors now pick your poision")
+Tester = player.toLowerCase()
+console.log(Tester);
+
+
