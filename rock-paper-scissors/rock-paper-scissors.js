@@ -14,8 +14,15 @@ n = Math.floor(Math.random() * 100)
     }
     return ComputerOutput
 }
+//Ask player for input and force lowercase for all
 let player = prompt("Hello let\'s play rock paper scissors now pick your poision")
-Tester = player.toLowerCase()
-console.log(Tester);
+function getPlayerAction(x){
+    let cap = x.toUpperCase()
+    let remaining = cap.slice(1)
+    let lowerCase = remaining.toLowerCase(1)
+    let firstLetter = cap.charAt()
+    return firstLetter + lowerCase
+}
+console.log(getPlayerAction(player))
 
 
