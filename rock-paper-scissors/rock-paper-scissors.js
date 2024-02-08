@@ -2,19 +2,44 @@
 function getComputerChoice() {
 
 n = Math.floor(Math.random() * 100)
-    let ComputerOutput;
+    let computerSelection;
     if (33 >= n){
-        ComputerOutput = "Rock"
+        computerSelection = "Rock"
     }
     else if (n <= 66){
-        ComputerOutput = "Scissors"
+        computerSelection = "Scissors"
     }
     else {
-        ComputerOutput = "Paper"
+        computerSelection = "Paper"
     }
-    return ComputerOutput
+    return computerSelection
 }
-//Ask player for input and force lowercase for all
+function playRound(playerSelection, computerSelection){
+        function getComputerChoice() {
+
+            n = Math.floor(Math.random() * 100)
+             let computerSelection;
+             if (33 >= n){
+                computerSelection = "Rock"
+             }
+             else if (n <= 66){
+                computerSelection = "Scissors"
+             }
+             else {
+                 computerSelection = "Paper"
+             }
+             return computerSelection
+        }
+    let cap = playerSelection.toUpperCase()
+    let remaining = cap.slice(1)
+    let lowerCase = remaining.toLowerCase(1)
+    let firstLetter = cap.charAt()
+    playerInput = firstLetter + lowerCase
+    return playerInput + getComputerChoice()
+}
+console.log(playRound("rock", ));
+
+/*Ask player for input and force lowercase for all
 let player = prompt("Hello let\'s play rock paper scissors now pick your poision")
 function getPlayerChoice(x){
     let cap = x.toUpperCase()
@@ -22,12 +47,5 @@ function getPlayerChoice(x){
     let lowerCase = remaining.toLowerCase(1)
     let firstLetter = cap.charAt()
     playerInput = firstLetter + lowerCase
-    return playerInput
-}
-function shoot(){
-    
-}
-console.log(getPlayerChoice(player))
-console.log(getComputerChoice())
-
+    return playerInput*/
 
