@@ -5,8 +5,8 @@ t = 0;
 q = 0;
 scoreboard = 0
 
-
-
+const content = document.createElement('p')
+const response = document.createElement('h1')
 const words = document.querySelector('.words');
 const btn1  = document.querySelector('.btn1');
 btn1.addEventListener('click',rockPlayRound)
@@ -17,7 +17,6 @@ btn3.addEventListener('click',scissorsPlayRound)
 
 function rockPlayRound(x) {
     function getComputerChoice() {
-
         n = Math.floor(Math.random() * 100)
          let computerSelection;
          if (33 >= n){
@@ -52,14 +51,19 @@ function rockPlayRound(x) {
     }else{
         winner = "STOP THESE DISGUSTING ATTEMPTS TO BREAK MY BELOVID CODE"
     }
-   
     /*create a way to dictate final outcome through a scoreboard*/
-    const content = document.createElement('p')
+    if (w > 4){
+        winner = "5th win. Dang I guess you can't really be called a loser anymore huh?"
+    }else if (l > 4){
+        winner ="5th loss. Well well well, if it isn\'t the greatest of losers in the flesh HA!"
+    }
+
     content.classList.add('text')
-    content.textContent =  content.textContent = `${winner} ---- Score (${w},${l},${t})`
+    content.textContent = `${winner} ---- Score (${w},${l},${t})`
     words.appendChild(content)
-    return 
+    return  
 }
+
 function paperPlayRound(x) {
     function getComputerChoice() {
         n = Math.floor(Math.random() * 100)
@@ -97,15 +101,11 @@ function paperPlayRound(x) {
         winner = "STOP THESE DISGUSTING ATTEMPTS TO BREAK MY BELOVID CODE"
     }
     /*create a way to dictate final outcome through a scoreboard*/
-    scoreboard = w - l;
-    if (scoreboard > 0){
-        response = "Dang I guess you can't really be called a loser anymore huh?"
-    }else if(scoreboard < 0){
-        response ="Well well well, if it isn\'t the greatest of losers in the flesh HA!"
-    }else if(scoreboard>1){
-        response = "Welp to bad for you I still think you\'re a loser *cough* *cough even if it is just a tie"
+    if (w > 4){
+        winner = "5th win. Dang I guess you can't really be called a loser anymore huh?"
+    }else if (l > 4){
+        winner ="5th loss. Well well well, if it isn\'t the greatest of losers in the flesh HA!"
     }
-    const content = document.createElement('p')
     content.classList.add('text')
     content.textContent =  content.textContent = `${winner} ---- Score (${w},${l},${t})`
     words.appendChild(content)
@@ -149,15 +149,11 @@ function scissorsPlayRound(x) {
         winner = "STOP THESE DISGUSTING ATTEMPTS TO BREAK MY BELOVID CODE"
     }
     /*create a way to dictate final outcome through a scoreboard*/
-    scoreboard = w - l;
-    if (scoreboard > 0){
-        response = "Dang I guess you can't really be called a loser anymore huh?"
-    }else if(scoreboard < 0){
-        response ="Well well well, if it isn\'t the greatest of losers in the flesh HA!"
-    }else if(scoreboard>1){
-        response = "Welp to bad for you I still think you\'re a loser *cough* *cough even if it is just a tie"
+    if (w > 4){
+        winner = "5th win. Dang I guess you can't really be called a loser anymore huh?"
+    }else if (l > 4){
+        winner ="5th loss. Well well well, if it isn\'t the greatest of losers in the flesh HA!"
     }
-    const content = document.createElement('p')
     content.classList.add('text')
     content.textContent = `${winner} ---- Score (${w},${l},${t})`
     words.appendChild(content)
