@@ -35,7 +35,7 @@ let secondNumber;
     }
 
 }
-{//buttons
+{//buttons functionality
     const screen = document.querySelector('.screen');
     const btnce = document.querySelector('#btnce');
     let all_btn = document.querySelectorAll("button");
