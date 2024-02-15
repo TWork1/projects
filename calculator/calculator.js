@@ -28,10 +28,19 @@ let secondNumber;
         else if (o = multiplication){
             return multiplication(a,b)
         }
-        else if (o = division){
+        else if (o = '/'){
             return division(a,b)
         }
 
     }
 
+}
+{//buttons
+    const screen = document.querySelector('.screen')
+    let all_btn = document.querySelectorAll("button");
+    all_btn.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+            return screen.textContent += this.textContent
+        });
+    });
 }
