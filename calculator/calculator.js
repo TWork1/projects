@@ -12,12 +12,12 @@ function division(a,b){
     return a/b
 }
 }
-{//variables
+{//Variables
 let firstNumber;
 let operater;
 let secondNumber;
 }
-{//operations details
+{//Operations details
     function operate(o,a,b){
         if (o = add){
             return add(a,b)
@@ -35,19 +35,19 @@ let secondNumber;
     }
 
 }
-{//buttons functionality
+{//Buttons functionality
     const screen = document.querySelector('.screen');
     const btnce = document.querySelector('#btnce');
-    let all_btn = document.querySelectorAll("button");
+    let all_btn = document.querySelectorAll('#btn');
     btnce.addEventListener('click',clear())
     all_btn.forEach(function(btn) {
         btn.addEventListener("click", function() {
-            if(this.textContent !== btnce.textContent)
-            screen.textContent += this.textContent
-            else btnce.addEventListener('click',clear())
+             screen.textContent += this.textContent
         });
     });
     function clear (){
         screen.textContent = ''
     }
+    const newSelector = document.querySelectorAll('#btnce')
+    console.log(newSelector)
 }
