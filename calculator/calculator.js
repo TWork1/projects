@@ -36,11 +36,18 @@ let secondNumber;
 
 }
 {//buttons
-    const screen = document.querySelector('.screen')
+    const screen = document.querySelector('.screen');
+    const btnce = document.querySelector('#btnce');
     let all_btn = document.querySelectorAll("button");
+    btnce.addEventListener('click',clear())
     all_btn.forEach(function(btn) {
         btn.addEventListener("click", function() {
-            return screen.textContent += this.textContent
+            if(this.textContent !== btnce.textContent)
+            screen.textContent += this.textContent
+            else btnce.addEventListener('click',clear())
         });
     });
+    function clear (){
+        screen.textContent = ''
+    }
 }
