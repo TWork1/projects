@@ -1,0 +1,109 @@
+body{
+    display: flex;
+    width:100vw;
+    height:100vh;
+    margin: 0%;
+
+}
+@font-face {
+    font-family: firstFamily;
+    src: url(image/Norse-Bold.otf);
+}
+.left{
+    background-image:url("image/image.jpg") ;
+    width:40%;
+    height:100%;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: white;
+    font-size: 300%;
+    font-family: firstFamily;
+    margin: 0;
+}
+.log{
+    display: flex;
+    background-color: rgba(0,0,0,60%);
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 40%;
+    gap:2%;
+}
+img{
+    width:20%;
+    height:20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+}
+.text{
+    font-size: 150%;
+   padding: 5% 40% 5% 10%;
+   font-weight: bold;
+}
+.textb{
+    font-size: 110%;
+    font-family: firstFamily;
+    margin-left:10% ;
+}
+.labels{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4%;
+}
+.label{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-top: 5%;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10%;
+    padding-bottom: 5%;
+}
+button{
+    border-radius: 12px;
+    width:20%;
+    height: 5%;
+    margin-left: 10%;
+    color: white;
+    background-color: #35530A;
+    border: none;
+    font-size: 80%;
+    font-weight: bold;
+    font-family: firstFamily;
+}
+input{
+    border-color: rgba(220,220,220,30%);
+    border-radius: 4px;
+    height: 40px;
+    border-width: 1px;
+}
+input:focus{
+    outline: solid blue 1px;
+    box-shadow: 10px 3px 15px 3px rgba(0, 0, 0, 10%);
+}
+fieldset{
+    border: none;
+    box-shadow: 10px 8px 15px 3px rgba(0, 0, 0, 10%);
+}
+a{
+    text-decoration: none;
+    color: #35530A;
+}
