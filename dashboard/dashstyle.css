@@ -7,6 +7,7 @@
     --shadows:1px 1px 10px 2px rgba(7, 15, 43, 30%);
     --main-background-color:#535C91;
     --svg-to-all-white:invert(62%) sepia(57%) saturate(227%) hue-rotate(203deg) brightness(85%) contrast(88%);
+    --icon-and-button:#9290C3
 }
 body{
     height: 100dvh;
@@ -22,6 +23,7 @@ div.sidebar{
     color: white;
     font-size: 2vw;
     font-weight: bolder;
+    font-family: newFont;
 }
 .dash-main{
     grid-area: 1/1/1/1;
@@ -70,7 +72,7 @@ img{
     flex-direction: column;
 }
 .header img{
-    height: 70%;
+    height: 60%;
     width: 10%;
 }
 .header-top-half{
@@ -80,40 +82,73 @@ img{
     justify-content:baseline;
 }
 img.bell{
-    height: 70%;
+    height: 60%;
     width: 8%;
-    padding-left: 17%;
+    padding-left: 5%;
 }
 img.profile{
     filter:none;
     border-radius: 50%;
-    width: 50px;
+    width: 40px;
     height: auto;
     position:relative;
-    top:10px; left:2px
+    bottom: 5px
 }
 .header-top-half input{
     border-style: solid var(--side-bar-color);
     border-radius: 30px;
-    width:30vw;
+    width:50vw;
     height: 5vh;
-    font-size: 1.5vh;
+    font-size: 3vh;
     text-align: center;
-    background-color: rgba(7, 15, 43, 30%);
+    background-color: rgba(7, 15, 43, 10%);
+    color: White;
+    font-family: newFont;
 }
 .header-top-half input:focus{
     outline-color: transparent;
     box-shadow: var(--shadows);
     border: 4px solid black;
 }
+.header h2{
+    color: white;
+    align-self: center;
+    padding-left: 1%;
+    position: relative;
+    top:10px;
+    font-family: newFont;
+}
+.header-bottom-half{
+    display: flex;
+    align-items: center;
+    gap:3%
+}
+img.profile_big{
+    filter:none;
+    border-radius: 50%;
+    width: auto;
+}
 .main-content{
     grid-area: 2/2/3/3;
     background-color: var(--main-background-color);
 }
-.header h2{
+.header-bottom-half p{
     color: white;
-    align-self: center;
-    padding-left: 2%;
-    position: relative;
-    top:10px;
+    font-family: newFont;
+    font-size: 1vw;
+}
+#bottomHeaderText{
+    font-size: 2vw;
+}
+.buttons{
+    width: 30%;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+button{
+    border-radius: 30px;
+    background-color:var(--icon-and-button);
+    border: transparent;
+    height: 3vw;
+    width: 30%;
 }
