@@ -1,9 +1,11 @@
 
 const body = document.querySelector('body')
-const button = document.querySelector('button')
+const subbuton = document.querySelector('dialog button')
 const dialog = document.querySelector('dialog')
 const dialogButton = document.querySelector('dialog + button')
+const form = document.getElementById('libraryForm')
 const myLibrary = ["mybook","book2","book3"]
+
 
 //prototype function for books
 function Book(title,author,pages,read){
@@ -20,8 +22,13 @@ function addBookToLibrary(){
     document.body.appendChild(books)
     }
 }
-addBookToLibrary()
 
 dialogButton.addEventListener('click', ()=>{
     dialog.showModal();
+})
+document.getElementById('form').addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    addBookToLibrary();
+    dialog.close()
 })
