@@ -1,6 +1,12 @@
+@font-face {
+    font-family: newFamily;
+    src: url(dpcomic.ttf);
+}
 body{
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    width: 100vw;
 }
 button{
     width: 50px;
@@ -18,4 +24,23 @@ dialog button{
     width: 30%;
     border-radius: 50%;
     text-align: start;
+}
+.cards{
+    font-family: newFamily;
+    background-color: gray;
+    display: flex;
+    padding:10px;
+    border-radius: 10px;
+
+}
+.cards:hover{
+    box-shadow: 10px 10px 10px 5px gray;
+    outline: solid black;
+}
+.cards-container{
+    display: grid;
+    gap:2%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(50px,1fr));
+    padding: 5%;
 }

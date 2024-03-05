@@ -4,31 +4,49 @@ const subbuton = document.querySelector('dialog button')
 const dialog = document.querySelector('dialog')
 const dialogButton = document.querySelector('dialog + button')
 const form = document.getElementById('libraryForm')
-const myLibrary = ["mybook","book2","book3"]
+const cardsContainer = document.querySelector('.cards-container')
 
+const myLibrary = [
+    {
+        title:"Gone with the Wind",
+        author:"Margaret Mitchell",
+        pages:"1037",
+    },
+    {
+        title:"Jane Eyre",
+        author:"Charlotte Brontë",
+        pages:"680",
+    }
+    
+]
 
 //prototype function for books
-function Book(title,author,pages,read){
+function Book(title,author,pages){
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;
 }
+
 //cycle through the array and add to element as text
 function addBookToLibrary(){
     for (i = 0; i< myLibrary.length; i++){
-    const books = document.createElement('p')
-    books.textContent = myLibrary[i]
-    document.body.appendChild(books)
+    const card = document.createElement('div')
+    card.classList.add('cards')
+    card.remove();
+    booktitle = myLibrary[i].title
+    bookpage = myLibrary[i].pages
+    bookauthor = myLibrary[i].author
+    card.textContent = `Title: ${booktitle}, Author: ${bookauthor}, Pages: ${bookpage}`
+    cardsContainer.appendChild(card)
     }
 }
 
 dialogButton.addEventListener('click', ()=>{
     dialog.showModal();
 })
+
 document.getElementById('form').addEventListener("submit",(e)=>{
     e.preventDefault();
-    const formData = new FormData(e.target);
     addBookToLibrary();
     dialog.close()
 })
