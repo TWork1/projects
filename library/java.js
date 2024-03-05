@@ -29,16 +29,24 @@ function Book(title,author,pages){
 
 //cycle through the array and add to element as text
 function addBookToLibrary(){
+    //erase old library
+    if (cardsContainer.firstChild){
+        for(i=0; i<=cardsContainer.children.length;i++){
+                const card = document.querySelector('.cards')
+                cardsContainer.removeChild(card)
+            }
+    }
+    //add library cards
     for (i = 0; i< myLibrary.length; i++){
     const card = document.createElement('div')
     card.classList.add('cards')
-    card.remove();
     booktitle = myLibrary[i].title
     bookpage = myLibrary[i].pages
     bookauthor = myLibrary[i].author
     card.textContent = `Title: ${booktitle}, Author: ${bookauthor}, Pages: ${bookpage}`
     cardsContainer.appendChild(card)
     }
+    
 }
 
 dialogButton.addEventListener('click', ()=>{
