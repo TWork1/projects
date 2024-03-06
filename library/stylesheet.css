@@ -29,9 +29,10 @@ dialog button{
     font-family: newFamily;
     background-color: gray;
     display: flex;
+    flex-direction: column;
     padding:10px;
     border-radius: 10px;
-
+    text-align: center;
 }
 .cards:hover{
     box-shadow: 10px 10px 10px 5px gray;
@@ -41,6 +42,12 @@ dialog button{
     display: grid;
     gap:2%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto-fill, minmax(50px,1fr));
+    grid-template-rows: repeat(auto-fill, minmax(content,1fr));
     padding: 5%;
+}
+.cards> Button{
+    border-radius: 10px;
+    height: 20%;
+    font-size: 50%;
+    align-self: flex-end;
 }
