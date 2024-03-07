@@ -1,11 +1,10 @@
-
 const body = document.querySelector('body');
 const subbuton = document.querySelector('dialog button');
 const dialog = document.querySelector('dialog');
 const dialogButton = document.querySelector('dialog + button');
 const form = document.getElementById('libraryForm');
 const cardsContainer = document.querySelector('.cards-container');
-
+let ITR;
 const myLibrary = [
     {
         title:"Gone with the Wind",
@@ -20,7 +19,6 @@ const myLibrary = [
     
 ]
 
-//prototype function for books
 function Book(title,author,pages,bchecked){
     this.title = title;
     this.author = author;
@@ -28,17 +26,17 @@ function Book(title,author,pages,bchecked){
     this.bchecked = bchecked;
 }
 
-//cycle through the array and add to element as text
+dialogButton.addEventListener('click', ()=>{
+    dialog.showModal();
+})
+
 function addBookToLibrary(){
-    //erase old library
-    if (cardsContainer.firstChild){
-        while(cardsContainer.firstChild){
-            const card = document.querySelector('.cards')
-            cardsContainer.removeChild(card)
+    while(cardsContainer.children.length < myLibrary.length){
+        if(ITR == undefined)
+        {
+            ITR = 0;
         }
-    }
-    //add library cards
-    for (i = 0; i<myLibrary.length; i++){
+        i = ITR;
         const card = document.createElement('div');
         card.classList.add('cards');
 
@@ -60,34 +58,30 @@ function addBookToLibrary(){
         card.appendChild(cardpages);
 
         const bigcheckbox = document.createElement('div');
-            const checkbox = document.createElement('INPUT');
-            checkbox.setAttribute('type','checkbox');
-            checkbox.checked = bookchecked;
-            bchecked.checeked = checkbox.checked;
-            bigcheckbox.appendChild(checkbox);
-            const text = document.createElement('div');
-            text.textContent = 'Completed?';
-            bigcheckbox.appendChild(text);
+        const checkbox = document.createElement('INPUT');
+        checkbox.setAttribute('type','checkbox');
+        checkbox.checked = bookchecked;
+        bchecked.checeked = checkbox.checked;
+        bigcheckbox.appendChild(checkbox);
+        const text = document.createElement('div');
+        text.textContent = 'Completed?';
+        bigcheckbox.appendChild(text);
         card.appendChild(bigcheckbox);
 
         const deletButton = document.createElement('BUTTON');
-        deletButton.textContent = 'remove';
+         deletButton.textContent = 'remove';
             deletButton.addEventListener('click',()=>{
-                parent = deletButton.parentNode;
-                parent.remove();
-                myLibrary.pop();
-            })
+            parent = deletButton.parentNode;
+            parent.remove();
+            myLibrary.pop();
+        })
 
         card.appendChild(deletButton);
         cardsContainer.appendChild(card);
+        ITR++;
     }
-    
 }
-//form open 
-dialogButton.addEventListener('click', ()=>{
-    dialog.showModal();
-})
-//close form
+
 document.getElementById('form').addEventListener("submit",(e)=>{
     e.preventDefault();
     bchecked = document.getElementById('read').checked;
@@ -99,8 +93,3 @@ document.getElementById('form').addEventListener("submit",(e)=>{
     addBookToLibrary();
     dialog.close();
 })
-
-let ITR;
-if(ITR == undefined){
-    ITR = 0;
- }
