@@ -51,3 +51,10 @@ dialog button{
     font-size: 50%;
     align-self: flex-end;
 }
+dialog + button{
+    border:  1px solid black;
+    border-radius: 50%;  
+}
+dialog + button:hover{
+    box-shadow: 1px 3px 10px 5px gray;
+}
