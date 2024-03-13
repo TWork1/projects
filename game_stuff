@@ -1,0 +1,8 @@
+((gameBoard[1].A = gameBoard[1].B) && (gameBoard[1].A = gameBoard[1].C))|| 
+        ((gameBoard[1].A = gameBoard[2].B) && (gameBoard[1].A = gameBoard[3].C))||
+        ((gameBoard[1].A = gameBoard[2].A) && (gameBoard[1].A = gameBoard[3].A))||
+        ((gameBoard[1].B = gameBoard[2].B) && (gameBoard[1].B = gameBoard[3].B))||
+        ((gameBoard[1].C = gameBoard[2].C) && (gameBoard[1].C = gameBoard[3].C))||
+        ((gameBoard[2].A = gameBoard[2].B) && (gameBoard[2].A = gameBoard[2].C))||
+        ((gameBoard[3].A = gameBoard[3].B) && (gameBoard[3].A = gameBoard[3].C))||
+        ((gameBoard[1].C = gameBoard[2].B) && (gameBoard[1].C = gameBoard[3].A)))
