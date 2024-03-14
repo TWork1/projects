@@ -12,9 +12,5 @@ body{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3, 1fr);
-    border: solid red;
-}
-.tile{
-    display: flex;
-    
+    border: solid black;
 }
