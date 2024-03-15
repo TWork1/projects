@@ -25,6 +25,7 @@
         const boardchanges = ()=>{
             function turns(){
                 currentplayer = player1;
+
                 return currentplayer
             }
             turns()
@@ -33,8 +34,11 @@
                 if(touched === "item" && e.target.innerHTML === ''){
                     if(currentplayer === player1){
                         e.target.innerHTML = `${player1.getmarker()}`
+                        currentplayer = player2;
                     }
-                    else{e.target.innerHTML = 'wrong'}
+                    else{
+                        e.target.innerHTML = `${player2.getmarker()}`
+                        currentplayer = player1}
                 }
             }
         }
@@ -45,5 +49,4 @@
     console.log(player2)
     runit = play();
     tile = runit.boardupdate();
-
  })();
