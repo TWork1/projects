@@ -14,3 +14,29 @@ body{
     grid-template-rows: repeat(3, 1fr);
     border: solid black;
 }
+
+.item{
+    border:2px solid black;
+    font-size: 10vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.item:hover{
+    background-color: azure;
+}
+.player1,.player2{
+    align-self:baseline;
+    margin: 30px;
+}
+p{
+    align-self: baseline;
+}
+button{
+    align-self: baseline;
+    margin-right: 25%;
+}
+label{
+    align-self: baseline;
+    padding-right: 5%;
+}
