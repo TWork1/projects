@@ -1,3 +1,2 @@
-import './stylesheet.css'
-import './imge/Home.jpg'
+import './homelayout'
 console.log('tea')

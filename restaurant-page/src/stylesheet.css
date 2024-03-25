@@ -1,4 +1,98 @@
-img{
-    width: 100vw;
+@font-face {
+    font-family: 'Logo-Font';
+    src: url('font/LoversQuarrel-Regular.ttf');
+    font-size: larger;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Jazz-Text';
+    src: url('font/Abisan\ Bihoctrial.ttf');
+}
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(29, 28, 28);
+    margin: 0;
+    height: 6%;
+}
+.logo{
+    color: goldenrod;
+    font-family: 'Logo-Font';
+    font-size: 300%;
+    text-decoration: none;
+    text-shadow: 10px 10px 10px white;
+}
+.logo:visited{
+    color: goldenrod;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     height: 100vh;
+    width: 100vw;
+    background-image: url('imge/Home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#content{
+display: flex;
+flex-direction: column;
+height: 100vh;
+width: 50vw;
+align-items: center;
+align-self: center;
+border-radius: 12px;
+margin-top: 2%;
+margin-bottom: 2%;
+max-width: 525px;
+background-color: rgba(118, 92, 72, 0.658);
+gap: 10%;
+}
+.call{
+    font-family: 'Jazz-Text';
+    font-size: 3vh;
+    text-align: center;
+    color:rgba(221, 219, 219, 0.849);
+    height: 10%;
+    margin-top: 20%;
+}
+.reserve{
+    width: 50%;
+    height: 10%;
+    background: rgba(0, 0, 0, 0.719);
+	color: white;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    border-radius: 4px;
+	outline: rgba(0, 0, 0, 0.192) ridge;
+}
+.reserve:hover{
+    animation: tilt-shaking 1.5s infinite;
+}
+.online{
+    width: 50%;
+    height: 10%;
+    background-color: rgba(219, 209, 209, 0.651);
+    color: black;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    border-radius: 4px;
+	outline: rgba(219, 209, 209, 0.192) ridge;
+}
+.online:hover{
+    background: rgba(0, 0, 0, 0.719);
+	color: white;
+    animation: tilt-shaking 1.5s infinite;
 }
