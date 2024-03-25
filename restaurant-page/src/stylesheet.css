@@ -6,7 +6,7 @@
 }
 @font-face {
     font-family: 'Jazz-Text';
-    src: url('font/Abisan\ Bihoctrial.ttf');
+    src: url('font/Italianno-Regular.ttf');
 }
 @keyframes tilt-shaking {
     0% { transform: rotate(0deg); }
@@ -54,15 +54,24 @@ margin-top: 2%;
 margin-bottom: 2%;
 max-width: 525px;
 background-color: rgba(118, 92, 72, 0.658);
-gap: 10%;
+gap: 5%;
 }
 .call{
     font-family: 'Jazz-Text';
-    font-size: 3vh;
+    font-size: 5vh;
     text-align: center;
-    color:rgba(221, 219, 219, 0.849);
+    color:rgba(236, 234, 234, 0.705);
     height: 10%;
     margin-top: 20%;
+}
+.text{
+    text-align: center;
+    font-size: 2vh;
+    color:rgba(173, 167, 167, 0.897);
+    width: 50%;
+}
+p{
+    color: rgb(230, 82, 82);
 }
 .reserve{
     width: 50%;
@@ -75,6 +84,7 @@ gap: 10%;
 	cursor: pointer;
     border-radius: 4px;
 	outline: rgba(0, 0, 0, 0.192) ridge;
+    margin-top: 10%;
 }
 .reserve:hover{
     animation: tilt-shaking 1.5s infinite;
