@@ -1,5 +1,5 @@
 import './head.css'
-export const top = () =>{
+export const head = () =>{
     const header = document.querySelector('header');
     const logo = document.createElement('a');
     logo.classList.add('logo')
