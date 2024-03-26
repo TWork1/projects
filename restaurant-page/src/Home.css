@@ -15,23 +15,6 @@
     75% { transform: rotate(-5deg); }
     100% { transform: rotate(0deg); }
   }
-header{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: rgb(29, 28, 28);
-    margin: 0;
-    height: 6%;
-}
-.logo{
-    color: goldenrod;
-    font-family: 'Logo-Font';
-    font-size: 300%;
-    text-decoration: none;
-    text-shadow: 10px 10px 10px white;
-}
-.logo:visited{
-    color: goldenrod;
-}
 body{
     display: flex;
     flex-direction: column;

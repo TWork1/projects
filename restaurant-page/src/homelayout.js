@@ -1,13 +1,9 @@
-import './stylesheet.css'
+import './Home.css'
 const content = document.querySelector('#content');
-const header = document.querySelector('header');
-
-const logo = document.createElement('a');
-logo.classList.add('logo')
-logo.setAttribute('href','/restaurant-page/dist/index.html')
-logo.innerHTML = '<em>The Lazzy Lounge<em>';
-header.prepend(logo);
-
+export const home = ()=>{
+    while(content.hasChildNodes()){
+        content.firstChild.remove()
+    }
 const call = document.createElement('h1');
 call.classList.add('call')
 call.innerHTML = 'The Coziest and Comfiest Cuisine'
@@ -27,3 +23,4 @@ const online = document.createElement('Button');
 online.classList.add('online')
 online.innerHTML = "Order Online"
 content.appendChild(online)
+}
