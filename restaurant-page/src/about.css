@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'base-text';
+    src: url(../src/font/FrederickatheGreat-Regular.ttf);
+}
+
+p{
+    color: black;
+    text-align: center;
+    font-size: 190%;
+    font-family: 'base-text';
+    padding: 1%;
+}
